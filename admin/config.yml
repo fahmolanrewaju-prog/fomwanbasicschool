@@ -3,6 +3,7 @@ backend:
   repo: fahmolanrewaju-prog/fomwanbasicschool
   branch: main
   base_url: https://fomwan-cms-auth.fahmolanrewaju.workers.dev
+  auth_endpoint: auth
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
