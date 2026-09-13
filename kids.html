@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kids Zone – Free Games | FOMWAN Basic School</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">🕌</div>
+          <span>FOMWAN Basic School</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="academics.html">Academics</a>
+          <a href="parents.html">Parents</a>
+          <a href="kids.html" class="nav-cta active">🎮 Kids Zone</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" style="padding:60px 0 70px;">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">Free for All Children</div>
+        <h1>Kids Zone – <span>Learn & Play!</span></h1>
+        <p>Fun educational games designed for young learners. No login, no payment – just pure learning fun. Parents can play with their children too!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Choose a Game</h2>
+        <p>Click any game card to start playing. Perfect for Nursery and Primary pupils.</p>
+      </div>
+
+      <div class="games-grid">
+        <!-- Memory Match -->
+        <div class="game-card" onclick="openGame('memory-game')">
+          <div class="game-emoji">🧠</div>
+          <h3>Memory Match</h3>
+          <p>Find the matching pairs! Train your memory with fun educational icons.</p>
+          <span class="btn-play">Play Now</span>
+        </div>
+
+        <!-- Math Quiz -->
+        <div class="game-card" onclick="openGame('math-game')">
+          <div class="game-emoji">🔢</div>
+          <h3>Math Challenge</h3>
+          <p>Simple addition and subtraction questions. Practice makes perfect!</p>
+          <span class="btn-play">Play Now</span>
+        </div>
+
+        <!-- Islamic Quiz -->
+        <div class="game-card" onclick="openGame('islamic-game')">
+          <div class="game-emoji">🕌</div>
+          <h3>Islamic Knowledge</h3>
+          <p>Fun quiz about Salah, Qur’an, Prophets and basic Islamic knowledge.</p>
+          <span class="btn-play">Play Now</span>
+        </div>
+
+        <!-- Colour Match -->
+        <div class="game-card" onclick="openGame('colour-game')">
+          <div class="game-emoji">🎨</div>
+          <h3>Colour Match</h3>
+          <p>Look at the colour and choose the correct name. Great for little ones!</p>
+          <span class="btn-play">Play Now</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GAME MODAL -->
+  <div class="game-modal" id="game-modal">
+    <div class="game-box">
+      <button class="game-close" onclick="closeGame()">×</button>
+
+      <!-- Memory Game -->
+      <div id="memory-game" class="game-content" style="display:none;">
+        <h2 class="game-title">🧠 Memory Match</h2>
+        <div class="memory-board" id="memory-board"></div>
+        <div class="score-display" id="memory-score">Moves: 0 | Matches: 0/8</div>
+        <div class="text-center mt-20">
+          <button class="btn btn-primary" onclick="startMemoryGame()">Restart Game</button>
+        </div>
+      </div>
+
+      <!-- Math Game -->
+      <div id="math-game" class="game-content" style="display:none;">
+        <h2 class="game-title">🔢 Math Challenge</h2>
+        <div class="quiz-question" id="math-question">Loading...</div>
+        <div class="quiz-options" id="math-options"></div>
+        <div class="score-display" id="math-score">Score: 0/8</div>
+      </div>
+
+      <!-- Islamic Game -->
+      <div id="islamic-game" class="game-content" style="display:none;">
+        <h2 class="game-title">🕌 Islamic Knowledge</h2>
+        <div class="quiz-question" id="islamic-question">Loading...</div>
+        <div class="quiz-options" id="islamic-options"></div>
+        <div class="score-display" id="islamic-score">Score: 0/8</div>
+      </div>
+
+      <!-- Colour Game -->
+      <div id="colour-game" class="game-content" style="display:none;">
+        <h2 class="game-title">🎨 Colour Match</h2>
+        <div id="colour-swatch" style="width:120px; height:120px; border-radius:20px; margin:0 auto 20px; box-shadow:0 4px 15px rgba(0,0,0,0.15);"></div>
+        <div class="quiz-question" id="colour-question">Loading...</div>
+        <div class="quiz-options" id="colour-options"></div>
+        <div class="score-display" id="colour-score">Score: 0/6</div>
+      </div>
+    </div>
+  </div>
+
+  <section class="section bg-white">
+    <div class="container text-center">
+      <h2 style="color:var(--primary-dark); margin-bottom:12px;">Tips for Parents</h2>
+      <p style="color:var(--text-light); max-width:620px; margin:0 auto;">
+        Sit with your child while they play. Praise effort more than perfect scores. 
+        These games are designed to make learning joyful and build confidence.
+      </p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>FOMWAN Basic School</h3>
+          <p>Under FOMWAN FCT Chapter. Providing quality Islamic and Western education in a serene environment at Wuse 2, Abuja.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="academics.html">Academics</a></li>
+            <li><a href="parents.html">Parents Portal</a></li>
+            <li><a href="kids.html">Kids Zone</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li>Plot 190, Aminu Kano Crescent</li>
+            <li>Wuse 2, Abuja</li>
+            <li><a href="mailto:fomwanfct2024tf@gmail.com">fomwanfct2024tf@gmail.com</a></li>
+            <li><a href="tel:+2348162532264">+234 816 253 2264</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 FOMWAN Basic School, FCT Chapter. All rights reserved.</p>
+        <p style="margin-top:6px;">Website designed & developed by <strong>Fahm Mubarak Olanrewaju</strong> (Computer Studies Teacher)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/games.js"></script>
+</body>
+</html>
