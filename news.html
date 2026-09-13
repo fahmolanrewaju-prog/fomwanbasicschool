@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News & Events - FOMWAN Basic School</title>
+    <!-- Link to your existing CSS file -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Extra styling specifically for the news page -->
+    <style>
+        .page-header {
+            background-color: #0d5c3a; /* Your school's dark green */
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .page-header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .news-container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-5px);
+        }
+        .news-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee; /* Placeholder color if image fails */
+        }
+        .news-content {
+            padding: 20px;
+        }
+        .news-date {
+            color: #f4b41a; /* Your school's yellow */
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .news-title {
+            color: #0d5c3a;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        .news-text {
+            color: #555;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #0d5c3a;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .read-more:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION BAR (Copied from your homepage) -->
+    <header>
+        <div class="logo">
+            <!-- Make sure the image path matches your repository -->
+            <img src="images/logo.png" alt="FOMWAN Basic School Logo"> 
+            <h1>FOMWAN Basic School</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="academics.html">Academics</a></li>
+                <li><a href="parents.html">Parents</a></li>
+                <li><a href="kids.html">Kids Zone</a></li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- PAGE TITLE -->
+    <section class="page-header">
+        <h1>School News & Events</h1>
+        <p>Stay updated with the latest happenings at FOMWAN Basic School</p>
+    </section>
+
+    <!-- NEWS GRID -->
+    <section class="news-container">
+        
+        <!-- NEWS ITEM 1 -->
+        <article class="news-card">
+            <!-- Replace 'images/sports.jpg' with your actual image path -->
+            <img src="https://via.placeholder.com/400x200/0d5c3a/ffffff?text=Inter-House+Sports" alt="Sports Day" class="news-img">
+            <div class="news-content">
+                <span class="news-date">October 15, 2026</span>
+                <h2 class="news-title">Annual Inter-House Sports Competition</h2>
+                <p class="news-text">Our students showcased incredible athletic talent last week during the annual sports event. The Green House emerged victorious this year!</p>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+        </article>
+
+        <!-- NEWS ITEM 2 -->
+        <article class="news-card">
+            <img src="https://via.placeholder.com/400x200/f4b41a/ffffff?text=Quran+Competition" alt="Quran Competition" class="news-img">
+            <div class="news-content">
+                <span class="news-date">September 28, 2026</span>
+                <h2 class="news-title">Quran Recitation Competition</h2>
+                <p class="news-text">We held our termly Quran recitation competition. Congratulations to all our young Hafiz who participated and made us proud.</p>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+        </article>
+
+        <!-- NEWS ITEM 3 -->
+        <article class="news-card">
+            <img src="https://via.placeholder.com/400x200/555555/ffffff?text=PTA+Meeting" alt="PTA Meeting" class="news-img">
+            <div class="news-content">
+                <span class="news-date">September 10, 2026</span>
+                <h2 class="news-title">Upcoming PTA Meeting</h2>
+                <p class="news-text">Dear parents, our first PTA meeting for the new academic session will hold on Friday, September 25th at 10:00 AM in the school hall.</p>
+                <a href="#" class="read-more">Read More &rarr;</a>
+            </div>
+        </article>
+
+    </section>
+
+    <!-- FOOTER (Copied from your homepage) -->
+    <footer>
+        <p>&copy; 2026 FOMWAN Basic School. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
