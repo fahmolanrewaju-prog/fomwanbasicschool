@@ -3,150 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News & Events - FOMWAN Basic School</title>
-    <!-- Link to your existing CSS file -->
+    <title>News & Events | FOMWAN Basic School</title>
     <link rel="stylesheet" href="css/style.css">
-    
-    <!-- Extra styling specifically for the news page -->
     <style>
-        .page-header {
-            background-color: #0d5c3a; /* Your school's dark green */
-            color: white;
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .page-header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
-        .news-container {
+        .news-embed-container {
             max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            min-height: 600px;
         }
-        .news-card {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        .news-card:hover {
-            transform: translateY(-5px);
-        }
-        .news-img {
+        .news-embed-container iframe {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
-            background-color: #eee; /* Placeholder color if image fails */
-        }
-        .news-content {
-            padding: 20px;
-        }
-        .news-date {
-            color: #f4b41a; /* Your school's yellow */
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            display: block;
-        }
-        .news-title {
-            color: #0d5c3a;
-            margin-top: 0;
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
-        .news-text {
-            color: #555;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
-        .read-more {
-            display: inline-block;
-            margin-top: 15px;
-            color: #0d5c3a;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .read-more:hover {
-            text-decoration: underline;
+            height: 700px;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
     </style>
 </head>
 <body>
 
-    <!-- NAVIGATION BAR (Copied from your homepage) -->
-    <header>
-        <div class="logo">
-            <!-- Make sure the image path matches your repository -->
-            <img src="images/logo.png" alt="FOMWAN Basic School Logo"> 
-            <h1>FOMWAN Basic School</h1>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">🕌</div>
+                    <span>FOMWAN Basic School</span>
+                </a>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="academics.html">Academics</a>
+                    <a href="parents.html">Parents</a>
+                    <a href="kids.html" class="nav-cta">🎮 Kids Zone</a>
+                    <a href="news.html" class="active">News</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <span></span><span></span><span></span>
+                </div>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="academics.html">Academics</a></li>
-                <li><a href="parents.html">Parents</a></li>
-                <li><a href="kids.html">Kids Zone</a></li>
-                <li><a href="news.html" class="active">News</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- PAGE TITLE -->
-    <section class="page-header">
-        <h1>School News & Events</h1>
-        <p>Stay updated with the latest happenings at FOMWAN Basic School</p>
+    <section class="hero" style="padding:60px 0 70px;">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Latest Updates</div>
+                <h1>School <span>News & Events</span></h1>
+                <p>Stay updated with the latest happenings, announcements and events at FOMWAN Basic School.</p>
+            </div>
+        </div>
     </section>
 
-    <!-- NEWS GRID -->
-    <section class="news-container">
-        
-        <!-- NEWS ITEM 1 -->
-        <article class="news-card">
-            <!-- Replace 'images/sports.jpg' with your actual image path -->
-            <img src="https://via.placeholder.com/400x200/0d5c3a/ffffff?text=Inter-House+Sports" alt="Sports Day" class="news-img">
-            <div class="news-content">
-                <span class="news-date">October 15, 2026</span>
-                <h2 class="news-title">Annual Inter-House Sports Competition</h2>
-                <p class="news-text">Our students showcased incredible athletic talent last week during the annual sports event. The Green House emerged victorious this year!</p>
-                <a href="#" class="read-more">Read More &rarr;</a>
-            </div>
-        </article>
-
-        <!-- NEWS ITEM 2 -->
-        <article class="news-card">
-            <img src="https://via.placeholder.com/400x200/f4b41a/ffffff?text=Quran+Competition" alt="Quran Competition" class="news-img">
-            <div class="news-content">
-                <span class="news-date">September 28, 2026</span>
-                <h2 class="news-title">Quran Recitation Competition</h2>
-                <p class="news-text">We held our termly Quran recitation competition. Congratulations to all our young Hafiz who participated and made us proud.</p>
-                <a href="#" class="read-more">Read More &rarr;</a>
-            </div>
-        </article>
-
-        <!-- NEWS ITEM 3 -->
-        <article class="news-card">
-            <img src="https://via.placeholder.com/400x200/555555/ffffff?text=PTA+Meeting" alt="PTA Meeting" class="news-img">
-            <div class="news-content">
-                <span class="news-date">September 10, 2026</span>
-                <h2 class="news-title">Upcoming PTA Meeting</h2>
-                <p class="news-text">Dear parents, our first PTA meeting for the new academic session will hold on Friday, September 25th at 10:00 AM in the school hall.</p>
-                <a href="#" class="read-more">Read More &rarr;</a>
-            </div>
-        </article>
-
+    <!-- NEWS EMBED -->
+    <section class="news-embed-container">
+        <iframe 
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRK3sbun3bAYHZta6i53ieoduxOZ3xONh1y5A2islfaevhRw6HTi7nZiwOOZWI9KN2BhgX-Olapso_j/pubhtml?gid=856077303&single=true" 
+            title="FOMWAN School News and Events">
+        </iframe>
     </section>
 
-    <!-- FOOTER (Copied from your homepage) -->
-    <footer>
-        <p>&copy; 2026 FOMWAN Basic School. All rights reserved.</p>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>FOMWAN Basic School</h3>
+                    <p>Under FOMWAN FCT Chapter. Providing quality Islamic and Western education in a serene environment at Wuse 2, Abuja.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academics.html">Academics</a></li>
+                        <li><a href="parents.html">Parents Portal</a></li>
+                        <li><a href="kids.html">Kids Zone</a></li>
+                        <li><a href="news.html">News</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>Plot 190, Aminu Kano Crescent</li>
+                        <li>Wuse 2, Abuja</li>
+                        <li><a href="mailto:fomwanfct2024tf@gmail.com">fomwanfct2024tf@gmail.com</a></li>
+                        <li><a href="tel:+2348162532264">+234 816 253 2264</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 FOMWAN Basic School, FCT Chapter. All rights reserved.</p>
+                <p style="margin-top:6px;">Website designed & developed by <strong>Fahm Mubarak Olanrewaju</strong> (Computer Studies Teacher)</p>
+            </div>
+        </div>
     </footer>
 
+    <script src="games.js"></script>
 </body>
 </html>
