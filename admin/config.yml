@@ -4,6 +4,8 @@ backend:
   branch: main
   base_url: https://fomwan-cms-auth.fahmolanrewaju.workers.dev
   auth_endpoint: auth
+  # This is the missing piece - tells CMS to use a popup
+  use_graphql: false
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
